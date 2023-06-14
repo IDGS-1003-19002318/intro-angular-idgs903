@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table table-striped table-hover table-bordered" *ngIf="alumnos.length">
+        <thead>
+          <tr>
+            <th>
+              <!-- <button class="btn-btn-primary" (onClick)="">Mostrar Imagen</button> -->
+            </th>
+            <th>Matricula</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Correo</th>
+            <th>Pago</th>
+            <th>Foto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let alumno of alumnos">
+            <td>{{ alumno.matricula }}</td>
+            <td>{{ alumno.nombre | uppercase}}</td>
+            <td>{{ alumno.edad }}</td>
+            <td>{{ alumno.correo }}</td>
+            <td>{{ alumno.pago|currency:'MXN' }}</td>
+            <td><img [src]="alumno.foto" alt="" width="50px" height="50px"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

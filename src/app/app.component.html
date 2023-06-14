@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <h1>HOLA MUNDO</h1>
+    <!-- Interpolacion de llaves -->
+    <p>{{ grupo }}</p>
+
+    <div>El doble de 3 es {{ duplicarN(3) }}</div>
+    <hr>
+    <div>
+      <b>Matricula: </b>{{ alumnos.matricula }}
+    </div>
+    <div>
+      <b>Nombre: </b>{{ alumnos.nombre | lowercase}}
+    </div>
+    <div>
+      <b>Fecha: </b>{{ alumnos.fechaNacimiento | date:'dd-MM-yyyy' }}
+    </div>
+    <div>
+      <b>Pago: </b>{{ alumnos.pago | currency:'MXN':true:'1.2-2'}}
+    </div>
+  </div>
+</div>
+<app-grupo class="text-primary"></app-grupo>
+<app-ievnn class="text-danger"></app-ievnn>
+<hr>
+<app-ievn class="text-success"></app-ievn>
