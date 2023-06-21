@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-ievn',
@@ -8,6 +9,10 @@ import { Component } from '@angular/core';
 export class IevnComponent {
 
   // alumnos: any[] = [];
+  imageWidth: number = 50;
+  imageMargin: number = 2;
+  muestraImagen: boolean = false;
+  listFilter: string = '';
 
   alumnos: any[] = [
     {
@@ -37,5 +42,10 @@ export class IevnComponent {
   ]
 
   constructor() { }
+
+  showImage(): void {
+    this.muestraImagen = !this.muestraImagen;
+  }
+
 
 }
