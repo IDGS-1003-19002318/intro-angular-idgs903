@@ -10,6 +10,8 @@ import { IdgsComponent } from './utl/idgs.component';
 import { IevnnComponent } from './utl/ievn.component';
 import { IevnComponent } from './utl/ievn/ievn.component';
 import { SumaComponent } from './utl/formularios/suma/suma.component';
+import { MenuComponent } from './utl/menu/menu.component';
+import { AlumnosFilterPipe } from './utl/alumnos-filter.pipe';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { SumaComponent } from './utl/formularios/suma/suma.component';
     IdgsComponent,
     IevnnComponent,
     IevnComponent,
-    SumaComponent
+    SumaComponent,
+    MenuComponent,
+    AlumnosFilterPipe
   ],
   imports: [
     BrowserModule,

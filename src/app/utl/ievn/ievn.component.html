@@ -29,10 +29,11 @@
             <th>Edad</th>
             <th>Correo</th>
             <th>Pago</th>
+            <th>Calificacion</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let alumno of alumnos">
+          <tr *ngFor="let alumno of alumnos | alumnosFilter:listFilter">
             <!-- binding properties -->
             <td><input type="checkbox" name="" id=""></td>
             <td><img [src]="alumno.foto" alt="" [width]="imageWidth" [style.margin.px]="imageMargin"
@@ -42,6 +43,7 @@
             <td>{{ alumno.edad }}</td>
             <td>{{ alumno.correo }}</td>
             <td>{{ alumno.pago|currency:'MXN' }}</td>
+            <td>{{ alumno.calificacion }}</td>
           </tr>
         </tbody>
       </table>
